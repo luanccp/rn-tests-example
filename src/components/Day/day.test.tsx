@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react-native";
+import { render,screen } from "@testing-library/react-native";
 import { Day } from "@components/Day";
 
 import clearDay from "@assets/clear_day.svg";
@@ -17,6 +17,6 @@ describe("Component: Day", () => {
       />
     );
 
-    debug();
+    expect(screen.getByText('18/07')).toBeTruthy()
   });
 });
